@@ -1,2 +1,3 @@
 # nllb200-lyrics-demo
-Demo of lyrics translation with the NLLB-200 model
+
+This is a Streamlit demo app  of lyrics translation generated using the NLLB-200 model.
