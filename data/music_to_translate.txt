@@ -1,0 +1,6 @@
+url_lyrics;url_image;artist;title
+https://www.musixmatch.com/fr/paroles/Adele-3/Hello;https://m.media-amazon.com/images/I/91MTLyIJrPL._SS500_.jpg;Adele;Hello
+https://www.musixmatch.com/fr/paroles/Imagine-Dragons/Radioactive;https://m.media-amazon.com/images/I/71SrRo5Mg6L._SL1057_.jpg;Imagine Dragons;Radioactive
+https://www.musixmatch.com/fr/paroles/Sia/Unstoppable;https://fr.shopping.rakuten.com/photo/1056162833.jpg;Sia;Unstoppable
+https://www.musixmatch.com/fr/paroles/The-Weeknd/Blinding-Lights;https://cdns-images.dzcdn.net/images/cover/a38ef87aa2917be1fe62866357f8ade1/500x500.jpg;The Weeknd;Blinding Lights
+https://www.musixmatch.com/fr/paroles/Lynyrd-Skynyrd/Sweet-Home-Alabama-from-Forrest-Gump;https://m.media-amazon.com/images/I/81DWI+YgOcL._SS500_.jpg;Lynyrd Skynyrd;Sweet Home Alabama
