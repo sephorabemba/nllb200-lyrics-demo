@@ -15,7 +15,7 @@ st.markdown("""
 This demo lets you check how the NLLB-200 research model performs at translating lyrics. 
 You can translate the lyrics in 200 languages, including low-resource languages. 
 
-All translations were pre-generated using the NLLB-200 research model.
+All translations were pre-generated using the NLLB-200 research model. Base lyrics are from Musixmatch.
 """
             )
 
