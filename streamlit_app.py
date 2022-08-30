@@ -12,10 +12,10 @@ st.markdown("## What is this demo? 🤔")
 st.markdown("> __*Translate your favorite songs in 200 languages with the NLLB-200 model!*__")
 
 st.markdown("""
-This demo lets you check how the NLLB-200 model performs at translating lyrics. 
+This demo lets you check how the NLLB-200 research model performs at translating lyrics. 
 You can translate the lyrics in 200 languages, including low-resource languages. 
 
-All translations were pre-generated using the NLLB-200 model.
+All translations were pre-generated using the NLLB-200 research model.
 """
             )
 
@@ -75,7 +75,11 @@ selected_title = df_music["title"][index_song]
 selected_artist = df_music["artist"][index_song]
 selected_lc = df_lang["code"][index_lang]
 file_tr = f"data/translation/{selected_title}/{selected_artist}_{selected_title}_{selected_lc}.txt"
-lyrics_translated = Path(file_tr).read_text()
+try:
+    lyrics_translated = Path(file_tr).read_text()
+except:
+    print("Can't load the translation file.")
+    lyrics_translated = "Sorry. Translation is not available. 😕"
 #st.markdown(lyrics_translated)
 
 
