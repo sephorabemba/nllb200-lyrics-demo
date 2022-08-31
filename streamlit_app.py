@@ -1,5 +1,5 @@
 """
-Streamlit app - NLLB-200 translation demo for lyrics
+Streamlit app - NLLB-200 translation demo for lyrics.
 """
 
 import pandas as pd
@@ -37,18 +37,13 @@ select_song = st.selectbox(
 )
 index_song = song_choices.index(select_song)
 select_img_url = df_music["url_image"][index_song]
-#st.write(f"You chose {select_song} at index {index_song} ")
-# st.write(f"Image url: {select_img_url}")
 
 # show picture from selected url
 col1_img, col2_img, col3_img = st.columns([1, 3, 1])
-
 with col1_img:
     st.write(' ')
-
 with col2_img:
     st.image(select_img_url)
-
 with col3_img:
     st.write(' ')
 
@@ -56,7 +51,6 @@ with col3_img:
 # load lang map
 df_lang = pd.read_csv("data/nllb-languages.txt", sep="|", encoding="latin-1", )
 df_lang["language_formatted"] = df_lang["language"] + " [" + df_lang["code"] + "]"
-# df_lang
 lang_choices = df_lang["language_formatted"].values.tolist()
 
 # select language
@@ -66,9 +60,8 @@ select_lang = st.selectbox(
     index=56,
 )
 index_lang = lang_choices.index(select_lang)
-# st.write(f"You chose {select_lang} at index {index_lang} ")
 
-# ===== if lang + song: load right translation file =====
+# ===== load right translations =====
 
 # open right translation file
 selected_title = df_music["title"][index_song]
@@ -80,15 +73,10 @@ try:
 except:
     print("Can't load the translation file.")
     lyrics_translated = "Sorry. Translation is not available. 😕"
-#st.markdown(lyrics_translated)
-
 
 # open right source file
 file_src = f"data/source/{selected_artist}_{selected_title}.txt"
 lyrics_src = Path(file_src).read_text()
-#st.markdown(lyrics_src)
-
-
 
 # show lyrics
 selected_tf = df_music["title_formatted"][index_song]
@@ -97,11 +85,9 @@ src_lf = "English [eng_Latn]"
 st.markdown(f"## {selected_tf} lyrics translation 🔁")
 
 col1_lyrics, col2_lyrics = st.columns(2)
-
 with col1_lyrics:
     st.markdown(f"### {src_lf}")
     st.text(lyrics_src)
-
 with col2_lyrics:
     st.markdown(f"### {select_lf}")
     st.text(lyrics_translated)
