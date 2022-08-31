@@ -30,7 +30,6 @@ df_music["title_formatted"] = df_music["title"] + ", by " + df_music["artist"]
 # select songs
 song_titles = df_music["title"]
 song_choices = df_music["title_formatted"].values.tolist()
-# song_choices = df_music["title"] + ", by " + df_music["artist"]
 select_song = st.selectbox(
     'Select a song',
     song_choices,
@@ -48,7 +47,6 @@ with col3_img:
     st.write(' ')
 
 # ====== load languages ======
-# load lang map
 df_lang = pd.read_csv("data/nllb-languages.txt", sep="|", encoding="latin-1", )
 df_lang["language_formatted"] = df_lang["language"] + " [" + df_lang["code"] + "]"
 lang_choices = df_lang["language_formatted"].values.tolist()
